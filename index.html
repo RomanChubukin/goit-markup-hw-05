@@ -13,10 +13,23 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./styles.css">
-    <title>goit-markup-hw-04</title>
+    <title>goit-markup-hw-05</title>
 </head>
 
 <body>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal-view">
+            <button type="button" class="button-close-modal" data-modal-close>
+                <svg width="11px" height="11px">
+                    <use href="./images/icon/icons.svg#icon-Vector-1"></use>
+                </svg>
+            </button>
+    
+        </div>
+    
+    </div>
+
     <header class="header">
         <div class="container-header">
             <nav class="header-nav">
@@ -42,11 +55,12 @@
         </div>
     </header>
     <main>
+       
 
         <section class="hero-background section">
-            <div class="container">
+                <div class="container">
                 <h1 class="hero-text">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="hero-button">Замовити послугу</button>
+                <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
         <section class="section-benefits">
@@ -101,9 +115,21 @@
             <div class="container">
                 <h2 class="section-name">Чим ми займаємося</h2>
                 <ul class="what-doing">
-                    <li><img src="./images/box_1.jpg" alt="Планшет з клавіатурою" width="370"></li>
-                    <li> <img src="./images/box_2.jpg" alt="Смартфон з ноутбуком" width="370"></li>
-                    <li> <img src="./images/img.jpg" alt="Палітра на планшеті" width="370"></li>
+                    <li class="what-doing-overlay-box">
+                        <div class="what-doing-overlay">
+                            <p class="what-doing-overlay-text">Десктопні додатки</p>
+                        </div>
+                        <img src="./images/box_1.jpg" alt="Планшет з клавіатурою" width="370"></li>
+                    <li class="what-doing-overlay-box"> 
+                        <div class="what-doing-overlay">
+                            <p class="what-doing-overlay-text">Мобільні додатки</p>
+                        </div>
+                        <img src="./images/box_2.jpg" alt="Смартфон з ноутбуком" width="370"></li>
+                    <li class="what-doing-overlay-box"> 
+                        <div class="what-doing-overlay">
+                            <p class="what-doing-overlay-text">Дизайнерські рішення</p>
+                        </div>
+                        <img src="./images/img.jpg" alt="Палітра на планшеті" width="370"></li>
                 </ul>
             </div>
         </section>
@@ -366,6 +392,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
